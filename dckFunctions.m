@@ -14,5 +14,5 @@ dckPlotBasic[x_,y_List,z_List,legenda_List] :=
         PlotLegends->legenda
     ]
 
-(* Mathematica Raw Program *)
+
 
