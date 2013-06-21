@@ -1,9 +1,9 @@
 dckPlotBasic[f_,            (* f: function to Plot                            *) 
-	     X_List,        (* x: List with variable and start and end value  *)
+	     x_List,        (* x: List with variable and start and end value  *)
 	     z_List,        (* z: List with Plolabel en AxesLabel             *)
 	     legenda_List   (* legenda: List met legenda strings              *)
 	     ] :=
-    Plot[F,X,
+    Plot[f,x,
         GridLines->Automatic,
         GridLinesStyle->Directive[LightGray,Dashed],
         PlotLabel->z[[1]],
@@ -14,4 +14,10 @@ dckPlotBasic[f_,            (* f: function to Plot                            *)
     ]
 
 
-
+dckReadPIData[file_String    (* Name of the data file *) ] :=
+Module[{data},
+	data = Import[file];
+	{ data[[2]], 
+		Transpose[data[[1]][[{1,2}]]],
+		data[[1]][[Range[13,Length[data[[1]] ] ] ]] }
+]
