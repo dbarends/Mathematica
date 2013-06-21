@@ -1,10 +1,9 @@
-dckPlotBasic[x_,y_List,z_List,legenda_List] :=
-(* x: function to Plot
-   y: List with variable and start and end value
-   z: List with Plolabel, AxesLabels
-   legenda: List met legenda strings
-   *)
-    Plot[x,y,
+dckPlotBasic[f_,            (* f: function to Plot                            *) 
+	     X_List,        (* x: List with variable and start and end value  *)
+	     z_List,        (* z: List with Plolabel en AxesLabel             *)
+	     legenda_List   (* legenda: List met legenda strings              *)
+	     ] :=
+    Plot[F,X,
         GridLines->Automatic,
         GridLinesStyle->Directive[LightGray,Dashed],
         PlotLabel->z[[1]],
