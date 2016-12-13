@@ -1,6 +1,8 @@
 (* 
 This file contains functions to easily read, present en analyse data in an excel
 file. The excel file needs to have a particular layout.
+
+ToDo: make er een echte bibliotheek van.
 *)
 
 
